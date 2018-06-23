@@ -1,0 +1,65 @@
+class.(extends)
+
+
+    
+     !event.(show)        
+        !action.(openTab)
+    
+
+    
+     !event.(tabs.close)
+        !if.tabcount.(0)
+            !action.(openTab)
+        
+    
+
+    
+     !event.(tabs.change) 
+        !action.(reploc)
+        !action.(pageReload)
+    
+
+    
+     !event.(next.click)
+        !if.(hasNext) return
+        !browse.(next)
+    
+
+    
+     !event.(back.click)
+        !if.(hasBack) return
+        !browse.(back)
+    
+
+    
+     !event.(reload.click) 
+     
+     !action.(refreshPage)
+    
+
+    
+     !event.(enterUrl)
+        !browse.(
+    
+
+    
+     !event.(newtab.click) 
+     
+    function doNewtabClick(UXMouseEvent !event)
+        
+        !action.(openTab)
+        !action.(goLast)
+    
+
+    
+     !event.(debug.action)
+    				!action.(executeFirebug)
+    
+
+    
+     !event.(useCTRL.U)
+        !document = !object.(cro.document)
+        !xml = !object.(cro.xmlprocessor)
+        
+        !action.(openTab)
+        !action.(src.page)
